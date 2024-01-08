@@ -1,4 +1,4 @@
-import { HomeIcon, LogInIcon } from "lucide-react";
+import { LogInIcon } from "lucide-react";
 import { Button } from "./button";
 
 const NavBarDesktop = () => {
@@ -6,8 +6,10 @@ const NavBarDesktop = () => {
     <div className="w-auto hidden sm-custom:flex">
       <nav className="w-[350px] h-auto none">
         <ul className=" flex items-center justify-between font-semibold">
-          <Button className=" w-auto h-[25px] flex justify-between px-1 gap-1">
-            {" "}
+          <Button
+            size="icon"
+            className=" w-auto h-[25px] flex justify-between px-1 gap-1"
+          >
             <LogInIcon size={16} />
             Login
           </Button>
