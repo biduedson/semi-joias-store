@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Promobanner from "./components/promo-banner";
 import Categories from "./components/categories";
 import SectionTitle from "@/components/ui/sectionTitle";
