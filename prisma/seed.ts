@@ -362,6 +362,213 @@ async function main() {
       data:colares,
     })
 
+    const pulseirasCategory = await prisma.category.create({
+      data:{
+        name: "Pulseiras",
+        slug:"pulseiras",
+        imageUrl:"/images/pulseiras/pulseiraCordaoBaiano.png"
+      }
+    });
+
+    const pulseiras = [
+      {
+        name: "Pulseira Cordão Baiano",
+        slug:"pulseira-cordão-baiano",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/pulseiras/pulseiraCordaoBaiano.png",
+          "/images/pulseiras/pulseiraCordaoBaiano2.png",
+          "/images/pulseiras/pulseiraCordaoBaiano3.png",
+          "/images/pulseiras/pulseiraCordaoBaiano4.png",
+        ],
+        basePrice: 76,
+        categoryId: pulseirasCategory.id,
+        discountPercentage: 15, 
+
+      },
+      {
+        name: "Pulseira Cubam Ice",
+        slug:"pulseira-cubam-ice",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/pulseiras/pulseiraCubamIce.png",
+          "/images/pulseiras/pulseiraCubamIce2.png",
+          "/images/pulseiras/pulseiraCubamIce3.png",
+          "/images/pulseiras/pulseiraCubamIce4.png",
+        ],
+        basePrice: 25,
+        categoryId: pulseirasCategory.id,
+        discountPercentage: 0, 
+
+      },
+      {
+        name: "Pulseira da Consagração",
+        slug:"pulseira-da-consagração",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/pulseiras/pulseiraDaConsagracao.png",
+          "/images/pulseiras/pulseiraDaConsagracao2.png",
+          "/images/pulseiras/pulseiraDaConsagracao3.png",
+          "/images/pulseiras/pulseiraDaConsagracao4.png",
+        ],
+        basePrice: 25,
+        categoryId: pulseirasCategory.id,
+        discountPercentage: 10, 
+
+      },
+      {
+        name: "Pulseira da Sorte",
+        slug:"pulseira-da-sorte",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/pulseiras/pulseiraDaSorte.png",
+          "/images/pulseiras/pulseiraDaSorte2.png",
+          "/images/pulseiras/pulseiraDaSorte3.png",
+          "/images/pulseiras/pulseiraDaSorte4.png",
+        ],
+        basePrice: 35,
+        categoryId: pulseirasCategory.id,
+        discountPercentage: 0, 
+        
+
+      },
+      {
+        name: "Pulseira infantil colorida",
+        slug:"pulseira-infantil-colorida",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/pulseiras/pulseiraInfantilColorida.png",
+          "/images/pulseiras/pulseiraInfantilColorida2.png",
+          "/images/pulseiras/pulseiraInfantilColorida3.png",
+          "/images/pulseiras/pulseiraInfantilColorida4.png",
+        ],
+        basePrice: 25,
+        categoryId: pulseirasCategory.id,
+        discountPercentage: 5, 
+    
+      },
+    ]
+
+    await prisma.product.createMany({
+      data: pulseiras
+    })
+
+    const acessoriosCategory = await prisma.category.create({
+      data:{
+        name: "Acessório",
+        slug:"acessorio",
+        imageUrl:"/images/acessorios/porta-joias-luxo-rosa4.png"
+      }
+    });
+
+
+    const acessorios = [
+      {
+        name: "Estojo separador de jóias",
+        slug:"estojo-separador-de-joias",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/acessorios/estojo-separador-de-joias.png",
+          "/images/acessorios/estojo-separador-de-joias2.png",
+          "/images/acessorios/estojo-separador-de-joias3.png",
+          "/images/acessorios/estojo-separador-de-joias4.png",
+        ],
+        basePrice: 105,
+        categoryId: acessoriosCategory.id,
+        discountPercentage: 0, 
+
+      },
+      {
+        name: "Mini maleta para bijuterias",
+        slug:"mini-maleta-para-bijuterias",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/acessorios/mini-maleta-bijuterias.png",
+          "/images/acessorios/mini-maleta-bijuterias2.png",
+          "/images/acessorios/mini-maleta-bijuterias3.png",
+          "/images/acessorios/mini-maleta-bijuterias4.png",
+        ],
+        basePrice: 87,
+        categoryId: acessoriosCategory.id,
+        discountPercentage: 10, 
+
+      },
+      {
+        name: "Porta jóias infantil rosa",
+        slug:"porta-jóias-infantil-rosa",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/acessorios/porta-joias-infantil-rosa.png",
+          "/images/acessorios/porta-joias-infantil-rosa2.png",
+          "/images/acessorios/porta-joias-infantil-rosa3.png",
+          "/images/acessorios/porta-joias-infantil-rosa4.png",
+        ],
+        basePrice: 78,
+        categoryId: acessoriosCategory.id,
+        discountPercentage: 0, 
+
+      },
+      {
+        name: "Porta jóias luxo rosa",
+        slug:"porta-jóias-luxo-rosa",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/acessorios/porta-joias-luxo-rosa.png",
+          "/images/acessorios/porta-joias-luxo-rosa2.png",
+          "/images/acessorios/porta-joias-luxo-rosa3.png",
+          "/images/acessorios/porta-joias-luxo-rosa4.png",
+        ],
+        basePrice: 78,
+        categoryId: acessoriosCategory.id,
+        discountPercentage: 0, 
+
+      },
+      {
+        name: "Porta jóias luxo rosa",
+        slug:"porta-jóias-luxo-rosa",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/acessorios/porta-joias-luxo-rosa.png",
+          "/images/acessorios/porta-joias-luxo-rosa2.png",
+          "/images/acessorios/porta-joias-luxo-rosa3.png",
+          "/images/acessorios/porta-joias-luxo-rosa4.png",
+        ],
+        basePrice: 178,
+        categoryId: acessoriosCategory.id,
+        discountPercentage: 15, 
+
+      },
+      {
+        name: "Porta jóias luxo modelo rosas",
+        slug:"porta-jóias-luxo-rosa-modelo-rosas",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Maecenas posuere lacus id gravida dignissim. Morbi sit amet rutrum ex. Duis sit amet sem orci. Morbi non nisl sed mauris mattis ullamcorper quis eget metus.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. Ut pellentesque lorem at eros vestibulum lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        imageUrls:[
+          "/images/acessorios/porta-joias-luxo-rosas.png",
+          "/images/acessorios/porta-joias-luxo-rosas2.png",
+          "/images/acessorios/porta-joias-luxo-rosas3.png",
+          "/images/acessorios/porta-joias-luxo-rosas4.png",
+        ],
+        basePrice: 178,
+        categoryId: acessoriosCategory.id,
+        discountPercentage: 15, 
+
+      },
+    ]
+
+    await prisma.product.createMany({
+      data:acessorios
+    })
     console.log("Seed completed successfully");
   } catch (error) {
     console.error("Error seeding database:", error);
